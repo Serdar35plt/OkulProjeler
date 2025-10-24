@@ -1,0 +1,72 @@
+#include <WiFi.h>
+#include <WebServer.h>
+
+const char* ssid = "WiFi_ADI";
+const char* password = "WiFi_SIFRE";
+
+WebServer server(80);
+
+// Motor pinleri
+int motor1Pin1 = 26;
+int motor1Pin2 = 27;
+
+void setup() {
+  Serial.begin(115200);
+  pinMode(motor1Pin1, OUTPUT);
+  pinMode(motor1Pin2, OUTPUT);
+  
+  // Motoru başlangıçta durdur
+  digitalWrite(motor1Pin1, LOW);
+  digitalWrite(motor1Pin2, LOW);
+
+  WiFi.begin(ssid, password);
+  Serial.println("WiFi'ye bağlanılıyor...");
+  
+  // 10 saniye bağlantı dene
+  for(int i = 0; i < 20; i++) {
+    if(WiFi.status() == WL_CONNECTED) break;
+    delay(500);
+    Serial.print(".");
+  }
+  
+  if(WiFi.status() == WL_CONNECTED) {
+    Serial.println("Bağlandı!");
+    Serial.println(WiFi.localIP());
+  } else {
+    Serial.println("Bağlantı başarısız!");
+  }
+
+  // Web sayfası içeriği
+  server.on("/", []() {
+    server.send(200, "text/html",
+      "<h1>Robot Kontrol</h1>"
+      "<button onclick=\"fetch('/ileri')\">İleri</button>"
+      "<button onclick=\"fetch('/geri')\">Geri</button>"
+      "<button onclick=\"fetch('/dur')\">Dur</button>"
+    );
+  });
+
+  server.on("/ileri", []() {
+    digitalWrite(motor1Pin1, HIGH);
+    digitalWrite(motor1Pin2, LOW);
+    server.send(200, "text/plain", "İleri");
+  });
+
+  server.on("/geri", []() {
+    digitalWrite(motor1Pin1, LOW);
+    digitalWrite(motor1Pin2, HIGH);
+    server.send(200, "text/plain", "Geri");
+  });
+
+  server.on("/dur", []() {
+    digitalWrite(motor1Pin1, LOW);
+    digitalWrite(motor1Pin2, LOW);
+    server.send(200, "text/plain", "Dur");
+  });
+
+  server.begin();
+}
+
+void loop() {
+  server.handleClient();
+}

@@ -1,0 +1,69 @@
+// 🔸 ALICI ARDUINO - SICAKLIK GÖSTERİCİ LCD 🔸
+
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2); // Portlar aynı
+
+float temperature = 0.0;
+float lastDisplayedTemp = -999.0; // önceki değer (flicker önleme)
+unsigned long lastUpdate = 0;
+bool dataReceived = false;
+
+void setup() {
+  Serial.begin(9600);
+
+  lcd.begin(16, 2);
+  lcd.print("Sicaklik Olcer");
+  lcd.setCursor(0, 1);
+  lcd.print("Veri Bekleniyor...");
+
+  Serial.println("Alici Istasyon Hazir");
+}
+
+void loop() {
+  // Yeni veri geldi mi?
+  if (Serial.available()) {
+    String data = Serial.readStringUntil('\n');
+    data.trim();
+
+    // Sıcaklık değerine çevir
+    temperature = data.toFloat();
+
+    // Veri geçerliyse ekrana yaz
+    if (temperature > -50 && temperature < 100) {
+      updateDisplay();
+      Serial.print("<<< ALINAN SICAKLIK: ");
+      Serial.print(temperature, 1);
+      Serial.println(" C");
+
+      lastUpdate = millis();
+      dataReceived = true;
+    }
+  }
+
+  // 10 saniye veri gelmezse "bağlantı yok" uyarısı
+  if (dataReceived && (millis() - lastUpdate > 10000)) {
+    lcd.clear();
+    lcd.print("Veri Kesildi!");
+    lcd.setCursor(0, 1);
+    lcd.print("Baglanti Yok");
+    dataReceived = false;
+  }
+
+  delay(50);
+}
+
+// 🔹 Ekranı yalnızca sıcaklık değiştiğinde güncelle
+void updateDisplay() {
+  if (abs(temperature - lastDisplayedTemp) >= 0.1) {
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Sicaklik:");
+
+    lcd.setCursor(0, 1);
+    lcd.print(temperature, 1);
+    lcd.print(" C");
+
+    lastDisplayedTemp = temperature;
+  }
+}

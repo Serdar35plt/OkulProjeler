@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "6CafpyvH4Ss=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\SC#\\Markdown\\Markdown\\Markdown.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lenovo\\.nuget\\packages\\markdig\\0.42.0\\markdig.0.42.0.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.web.webview2\\1.0.3537.50\\microsoft.web.webview2.1.0.3537.50.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,33 @@
+// 🔸 VERİCİ ARDUINO - SADECE SICAKLIK ÖLÇÜMÜ 🔸
+
+const int sensorPin = A0; // Potansiyometre veya sensör A0'a bağlı
+
+float temperature = 0.0;
+unsigned long lastSendTime = 0;
+const unsigned long sendInterval = 2000; // 2 saniyede bir gönderim
+
+void setup() {
+  Serial.begin(9600);
+  Serial.println("Verici Istasyon Hazir - Sadece Sicaklik");
+}
+
+void loop() {
+  // Sensör verisini oku
+  int sensorValue = analogRead(sensorPin);
+
+  // Daha doğru bir sıcaklık hesaplaması (15°C – 35°C)
+  temperature = 15.0 + (sensorValue / 1023.0) * 20.0;
+
+  // Belirli aralıklarla veri gönder
+  if (millis() - lastSendTime >= sendInterval) {
+    Serial.println(temperature, 1); // yalnızca sıcaklık değerini gönder
+
+    Serial.print(">>> GONDERILEN SICAKLIK: ");
+    Serial.print(temperature, 1);
+    Serial.println(" C");
+
+    lastSendTime = millis();
+  }
+
+  delay(100); // küçük gecikme, kararlılığı artırır
+}

@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lenovo\\Desktop\\SC#\\Markdown\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CC82D925-9093-438F-9902-D77C17BE27E2}|Markdown\\Markdown.csproj|c:\\users\\lenovo\\desktop\\sc#\\markdown\\markdown\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CC82D925-9093-438F-9902-D77C17BE27E2}|Markdown\\Markdown.csproj|solutionrelative:markdown\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC82D925-9093-438F-9902-D77C17BE27E2}|Markdown\\Markdown.csproj|c:\\users\\lenovo\\desktop\\sc#\\markdown\\markdown\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC82D925-9093-438F-9902-D77C17BE27E2}|Markdown\\Markdown.csproj|solutionrelative:markdown\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\SC#\\Markdown\\Markdown\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Markdown\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\SC#\\Markdown\\Markdown\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Markdown\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T11:56:49.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\SC#\\Markdown\\Markdown\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Markdown\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\SC#\\Markdown\\Markdown\\MainWindow.xaml*",
+              "RelativeToolTip": "Markdown\\MainWindow.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-20T11:56:51.594Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

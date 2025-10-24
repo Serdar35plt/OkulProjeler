@@ -1,0 +1,42 @@
+@{
+    ViewData["Title"] = "Index";
+}
+
+@model IEnumerable<Contacts>
+<h2>Admin Paneli</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>İsim</th>
+            <th>Mesaj</th>
+            <th>Durum</th>
+            <th>İşlem</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var m in Model)
+    {
+        <tr class="@(m.IsRead ? "table-success" : "table-warning")">
+            <td>@m.Id</td>
+            <td>@m.Name</td>
+            <td>@m.Message</td>
+            <td>@(m.IsRead ? "Okundu" : "Yeni")</td>
+            <td>
+                @if (!m.IsRead)
+                {
+                    <form asp-action="MarkAsRead" method="post">
+                        <input type="hidden" name="id" value="@m.Id" />
+                        <button type="submit" class="btn btn-sm btn-success">Okudum</button>
+                    </form>
+                }
+                else
+                {
+                    <span class="text-muted">✔</span>
+                }
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

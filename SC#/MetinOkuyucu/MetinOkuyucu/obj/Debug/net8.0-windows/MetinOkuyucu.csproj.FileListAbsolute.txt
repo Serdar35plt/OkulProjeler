@@ -1,0 +1,16 @@
+C:\Users\Lenovo\Desktop\SC#\MetinOkuyucu\MetinOkuyucu\obj\Debug\net8.0-windows\MetinOkuyucu.Form1.resources
+C:\Users\Lenovo\Desktop\SC#\MetinOkuyucu\MetinOkuyucu\obj\Debug\net8.0-windows\MetinOkuyucu.csproj.GenerateResource.cache
+C:\Users\Lenovo\Desktop\SC#\MetinOkuyucu\MetinOkuyucu\obj\Debug\net8.0-windows\MetinOkuyucu.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Desktop\SC#\MetinOkuyucu\MetinOkuyucu\obj\Debug\net8.0-windows\MetinOkuyucu.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\SC#\MetinOkuyucu\MetinOkuyucu\obj\Debug\net8.0-windows\MetinOkuyucu.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\SC#\MetinOkuyucu\MetinOkuyucu\obj\Debug\net8.0-windows\MetinOkuyucu.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\SC#\MetinOkuyucu\MetinOkuyucu\bin\Debug\net8.0-windows\MetinOkuyucu.exe
+C:\Users\Lenovo\Desktop\SC#\MetinOkuyucu\MetinOkuyucu\bin\Debug\net8.0-windows\MetinOkuyucu.deps.json
+C:\Users\Lenovo\Desktop\SC#\MetinOkuyucu\MetinOkuyucu\bin\Debug\net8.0-windows\MetinOkuyucu.runtimeconfig.json
+C:\Users\Lenovo\Desktop\SC#\MetinOkuyucu\MetinOkuyucu\bin\Debug\net8.0-windows\MetinOkuyucu.dll
+C:\Users\Lenovo\Desktop\SC#\MetinOkuyucu\MetinOkuyucu\bin\Debug\net8.0-windows\MetinOkuyucu.pdb
+C:\Users\Lenovo\Desktop\SC#\MetinOkuyucu\MetinOkuyucu\obj\Debug\net8.0-windows\MetinOkuyucu.dll
+C:\Users\Lenovo\Desktop\SC#\MetinOkuyucu\MetinOkuyucu\obj\Debug\net8.0-windows\refint\MetinOkuyucu.dll
+C:\Users\Lenovo\Desktop\SC#\MetinOkuyucu\MetinOkuyucu\obj\Debug\net8.0-windows\MetinOkuyucu.pdb
+C:\Users\Lenovo\Desktop\SC#\MetinOkuyucu\MetinOkuyucu\obj\Debug\net8.0-windows\MetinOkuyucu.genruntimeconfig.cache
+C:\Users\Lenovo\Desktop\SC#\MetinOkuyucu\MetinOkuyucu\obj\Debug\net8.0-windows\ref\MetinOkuyucu.dll

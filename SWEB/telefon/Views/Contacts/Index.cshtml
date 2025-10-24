@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Index";
+}
+
+@model Contacts
+<h2>İletişim</h2>
+
+@if (ViewBag.Success != null)
+{
+    <div class="alert alert-success">@ViewBag.Success</div>
+}
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+
+<form asp-action="Index" method="post">
+    <div class="form-group mb-2">
+        <label>İsim</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group mb-2">
+        <label>Mesaj</label>
+        <textarea asp-for="Message" class="form-control" rows="4"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Gönder</button>
+</form>
